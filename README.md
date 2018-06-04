@@ -1,5 +1,6 @@
 # ABN4Java
 [![Build Status](https://travis-ci.org/mlew980/ABN4Java.svg?branch=master)](https://travis-ci.org/mlew980/ABN4Java)
+
 This project allows for easy Java integration with the ABN web-services (JSON) provided by the Australian Government.
 
 ## Getting Started - GUID Key
