@@ -19,7 +19,7 @@
         <repository>
             <id>internal.repo</id>
             <name>Temporary Staging Repository</name>
-            <url>file://${project.build.directory}/mvn-repo</url>
+            <url>file://${basedir}/dist/mvn-repo</url>
         </repository>
     </distributionManagement>
     <build>
@@ -29,16 +29,16 @@
                 <artifactId>site-maven-plugin</artifactId>
                 <version>0.12</version>
                 <configuration>
-                    <message>Maven artifacts for ${project.version}</message> <!-- git commit message -->
-                    <noJekyll>true</noJekyll> <!-- disable webpage processing -->
-                    <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
-                    <branch>refs/heads/mvn-repo</branch> <!-- remote branch name -->
+                    <message>Maven artifacts for ${project.version}</message>
+                    <noJekyll>true</noJekyll>
+                    <outputDirectory>${basedir}/dist/mvn-repo</outputDirectory>
+                    <branch>refs/heads/mvn-repo</branch>
                     <includes>
                         <include>**/*</include>
                     </includes>
                     <oauth2Token>${env.github.global.oauth2Token}</oauth2Token>
-                    <repositoryName>ABN4Java</repositoryName> <!-- github repo name -->
-                    <repositoryOwner>mlew980</repositoryOwner> <!-- github username  -->
+                    <repositoryName>ABN4Java</repositoryName>
+                    <repositoryOwner>mlew980</repositoryOwner>
                 </configuration>
                 <dependencies>
                     <dependency>
